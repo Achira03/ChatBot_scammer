@@ -1,0 +1,9 @@
+PyMuPDF>=1.24.0
+Pillow>=10.0.0
+pytesseract>=0.3.13
+ollama>=0.4.7
+pydantic>=2.8.0
+python-dotenv>=1.0.1
+neo4j>=5.25.0
+tqdm>=4.66.0
+rapidfuzz>=3.9.0

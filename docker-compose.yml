@@ -1,0 +1,21 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j-project2
+
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD}
+
+    volumes:
+      - neo4j_project2_data:/data
+      - neo4j_project2_logs:/logs
+
+    restart: unless-stopped
+
+volumes:
+  neo4j_project2_data:
+  neo4j_project2_logs:

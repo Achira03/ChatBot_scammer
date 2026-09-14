@@ -1,0 +1,144 @@
+{
+  "node_types": [
+    "Document",
+    "Section",
+    "ScamType",
+    "ScamCase",
+    "ScamMethod",
+    "Signal",
+    "Information",
+    "Risk",
+    "Action",
+    "Organization",
+    "Channel",
+    "Contact",
+    "Law",
+    "Statistic",
+    "Evidence"
+  ],
+  "relationship_schema": {
+    "Document": {
+      "HAS_SECTION": [
+        "Section"
+      ]
+    },
+    "Section": {
+      "DESCRIBES": [
+        "ScamType",
+        "ScamCase",
+        "ScamMethod"
+      ],
+      "RECOMMENDS": [
+        "Action"
+      ],
+      "REFERENCES": [
+        "Organization",
+        "Law",
+        "Statistic"
+      ]
+    },
+    "ScamType": {
+      "USES_METHOD": [
+        "ScamMethod"
+      ],
+      "USES_CHANNEL": [
+        "Channel"
+      ],
+      "HAS_SIGNAL": [
+        "Signal"
+      ],
+      "REQUESTS_INFORMATION": [
+        "Information"
+      ],
+      "CAUSES": [
+        "Risk"
+      ],
+      "PREVENTED_BY": [
+        "Action"
+      ],
+      "TARGETS": [
+        "Organization"
+      ],
+      "RELATED_TO_LAW": [
+        "Law"
+      ]
+    },
+    "ScamCase": {
+      "INSTANCE_OF": [
+        "ScamType"
+      ],
+      "USES_METHOD": [
+        "ScamMethod"
+      ],
+      "USES_CHANNEL": [
+        "Channel"
+      ],
+      "HAS_SIGNAL": [
+        "Signal"
+      ],
+      "REQUESTS_INFORMATION": [
+        "Information"
+      ],
+      "CAUSES": [
+        "Risk"
+      ],
+      "PREVENTED_BY": [
+        "Action"
+      ]
+    },
+    "ScamMethod": {
+      "USES_CHANNEL": [
+        "Channel"
+      ],
+      "HAS_SIGNAL": [
+        "Signal"
+      ],
+      "REQUESTS_INFORMATION": [
+        "Information"
+      ],
+      "CAUSES": [
+        "Risk"
+      ],
+      "PREVENTED_BY": [
+        "Action"
+      ],
+      "TARGETS": [
+        "Organization"
+      ]
+    },
+    "Signal": {
+      "INDICATES": [
+        "ScamType",
+        "ScamMethod"
+      ]
+    },
+    "Action": {
+      "CONTACT": [
+        "Organization"
+      ],
+      "USES_CHANNEL": [
+        "Channel"
+      ]
+    },
+    "Organization": {
+      "HAS_CONTACT": [
+        "Contact"
+      ],
+      "PROVIDES": [
+        "Channel"
+      ]
+    },
+    "Law": {
+      "ADDRESSES": [
+        "ScamType",
+        "ScamMethod"
+      ]
+    },
+    "Statistic": {
+      "DESCRIBES": [
+        "ScamType",
+        "ScamMethod"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "text": "กรุณาแจ้งรหัส OTP ที่ได้รับทาง SMS เพื่อยืนยันตัวตน",
+    "gold": {
+      "entities": [
+        {"type": "Signal", "name": "ขอรหัส OTP", "evidence_quote": "กรุณาแจ้งรหัส OTP"},
+        {"type": "Information", "name": "OTP", "evidence_quote": "รหัส OTP"},
+        {"type": "Channel", "name": "SMS", "evidence_quote": "ทาง SMS"}
+      ],
+      "relations": [
+        {
+          "source_type": "Signal",
+          "source_name": "ขอรหัส OTP",
+          "type": "REQUESTS_INFORMATION",
+          "target_type": "Information",
+          "target_name": "OTP",
+          "evidence_quote": "กรุณาแจ้งรหัส OTP"
+        }
+      ]
+    }
+  }
+]

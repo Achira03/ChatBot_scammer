@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+
+.venv/
+venv/
+__pycache__/
+
+data/pdf/*.pdf
+data/extracted/
+data/chunks/
+data/llm_cache/
+data/graph/
+
+*.log
+.vscode/
+.idea/
